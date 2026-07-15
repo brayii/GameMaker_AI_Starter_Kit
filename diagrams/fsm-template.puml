@@ -1,0 +1,11 @@
+@startuml
+title Finite State Machine Template
+
+[*] --> Idle
+Idle --> Active : activation condition
+Active --> Cooldown : action completed
+Cooldown --> Idle : timer expired
+Active --> Disabled : interrupted
+Disabled --> Idle : recovery condition
+
+@enduml

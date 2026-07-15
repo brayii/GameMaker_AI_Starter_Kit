@@ -1,0 +1,30 @@
+@startuml
+title Object Relationships
+
+class obj_game_controller {
+  +owns global game state
+}
+
+class obj_player {
+  +reads player input
+  +owns player state
+}
+
+class obj_camera {
+  +follows target
+}
+
+class obj_ui {
+  +draws HUD
+}
+
+obj_game_controller --> obj_player : coordinates
+obj_camera --> obj_player : follows
+obj_ui --> obj_game_controller : reads display state
+
+note bottom
+Replace this starter diagram with project-specific objects.
+Keep relationships focused and implementation-oriented.
+end note
+
+@enduml

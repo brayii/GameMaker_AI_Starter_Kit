@@ -1,0 +1,15 @@
+@startuml
+title Room Flow
+
+[*] --> rm_boot
+rm_boot --> rm_menu
+rm_menu --> rm_game
+rm_game --> rm_results
+rm_results --> rm_game : retry
+rm_results --> rm_menu : exit
+
+note right of rm_boot
+Replace rooms with the actual project flow.
+end note
+
+@enduml

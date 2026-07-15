@@ -1,0 +1,30 @@
+# Builds and packages
+builds/
+*.zip
+*.exe
+*.apk
+*.aab
+*.ipa
+
+# Temporary and generated files
+temp/
+tmp/
+cache/
+*.tmp
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# Local notes and credentials
+.env
+.env.*
+secrets/
+credentials/
+
+# Add project-specific GameMaker generated folders here after inspecting the project.

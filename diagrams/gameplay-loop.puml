@@ -1,0 +1,23 @@
+@startuml
+title Core Gameplay Loop
+
+start
+:Enter gameplay;
+:Observe game state;
+:Choose action;
+:Perform action;
+:Receive feedback;
+:Game state changes;
+
+if (Goal reached?) then (yes)
+  :Reward or completion;
+  stop
+else (no)
+  if (Failure state?) then (yes)
+    :Retry, reset, or exit;
+  else (no)
+    :Continue playing;
+  endif
+endif
+
+@enduml

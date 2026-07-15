@@ -1,0 +1,26 @@
+@startuml
+title AI-Assisted Feature Workflow
+
+start
+:Human describes feature;
+:GameMaker assistant defines behavior;
+:Update project documents and diagrams;
+if (Milestone ready?) then (yes)
+  :Create Codex implementation task;
+  :Codex reads AGENTS.md and repository;
+  :Codex implements smallest coherent change;
+  :Human tests in GameMaker;
+  :GameMaker assistant reviews diff and behavior;
+  if (Fixes required?) then (yes)
+    :Create correction task;
+    --> :Codex reads AGENTS.md and repository;
+  else (no)
+    :Commit completed feature;
+    stop
+  endif
+else (no)
+  :Complete missing planning;
+  --> :Update project documents and diagrams;
+endif
+
+@enduml
