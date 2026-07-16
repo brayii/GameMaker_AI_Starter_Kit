@@ -22,41 +22,29 @@ Avoid unnecessary architecture. A small working system is preferable to a large 
 Use this order when making decisions:
 
 1. Current project code and resource structure
-2. This `AGENTS.md`
-3. Files under `standards/`
-4. Detailed project decisions under `docs/`
-5. Files under `diagrams/`
-6. Current official GameMaker documentation
+2. Explicit current task requirements
+3. Detailed project decisions under `docs/`
+4. This `AGENTS.md`
+5. Files under `standards/`
+6. Files under `diagrams/`
+7. Relevant files under `patterns/`
+8. Current official GameMaker documentation for engine behavior
 
-Project-specific values summarized in this file are an exception: when a summary conflicts with its detailed project document, the detailed project document is authoritative.
+Current official GameMaker documentation is authoritative for engine syntax and behavior. Project code, current task requirements, and detailed project documents control project-specific design decisions.
 
 Never invent GameMaker functions, events, APIs, metadata fields, or engine behavior.
 
 ## Required reading
 
-Before implementing a feature, read in this order:
+Always read:
 
 1. `AGENTS.md`
 2. `standards/development-workflow.md`
-3. `standards/gamemaker-projects.md`
-4. `standards/objects-and-events.md`
-5. `standards/rooms-and-instances.md`
-6. `standards/gml-style.md`
-7. `standards/testing-and-validation.md`
-8. `standards/code-review.md`
-9. `docs/00-project-readiness.md`
-10. `docs/01-game-vision.md`
-11. `docs/02-gameplay.md`
-12. `docs/03-architecture.md`
-13. `docs/04-object-plan.md`
-14. `docs/05-room-plan.md`
-15. `docs/06-asset-plan.md`
-16. `docs/07-roadmap.md`
-17. `docs/08-testing.md`
-18. `docs/09-coding-standards.md`
-19. Relevant files under `diagrams/`
+3. `docs/00-project-readiness.md`
+4. `docs/01-game-vision.md`
+5. `docs/07-roadmap.md`
 
-Read files under `patterns/` only when the task matches that pattern. Patterns are optional guidance, not mandatory architecture.
+Then read the standards, project documents, diagrams, and patterns relevant to the task. Read `standards/gamemaker-projects.md` before GameMaker resource or gameplay implementation. Patterns are optional guidance, not mandatory architecture.
 
 Then inspect the current GameMaker project and existing code.
 
