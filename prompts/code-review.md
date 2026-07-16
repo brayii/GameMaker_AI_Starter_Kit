@@ -36,4 +36,7 @@ For each finding include:
 - Why it matters
 - Smallest recommended correction
 
-Finish with a focused Codex correction task.
+Finish with either:
+
+1. A focused Codex correction task, or
+2. Approval to commit.

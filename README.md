@@ -1,29 +1,61 @@
-# GameMaker Codex Template
+# GameMaker AI Starter Kit
 
-A reusable repository foundation for building GameMaker projects with:
+A reusable documentation and workflow foundation for AI-assisted GameMaker development.
 
-- A human game director
-- A GameMaker planning and review assistant
-- Codex as the repository implementer
-- GameMaker as the build, runtime, editor, and gameplay authority
-- Git as the safety net
+Copy this template into the root of a new blank GameMaker project or an existing GameMaker project. Create a blank project in GameMaker before using the template for a new game. This repository intentionally contains no generated `.yyp`, `.yy`, `.gml`, object, room, sprite, or other GameMaker resource files.
+
+## Roles
+
+- The human owner is the creative director and product owner. They decide what the game should be, test gameplay, approve commits, and authorize pushes.
+- The planning assistant acts as technical lead. It clarifies systems, prepares Codex tasks, and performs independent reviews.
+- Codex is the implementation engineer. It inspects the repository, makes scoped changes, performs self-review, and prepares work for approval.
+- GameMaker builds, runs, and validates the game.
 
 ## Workflow
 
-1. Complete the planning gate in `docs/00-project-readiness.md`.
-2. Define the first playable milestone.
-3. Ask the GameMaker assistant to produce a Codex-ready implementation task.
-4. Let Codex inspect and modify the repository.
-5. Test the result in GameMaker.
-6. Review the Git diff with the GameMaker assistant.
-7. Give corrections to Codex.
-8. Test again.
-9. Commit the completed milestone.
-10. Repeat.
+```text
+Design -> Codex implementation -> Codex self-review -> GameMaker test
+       -> Independent review -> Human approval -> Commit -> Optional push
+```
+
+Codex never commits without explicit approval and never pushes without separate explicit approval. The full process is defined in `standards/development-workflow.md`.
 
 ## Start here
 
-Complete these files in order:
+1. Create or open a GameMaker project and save it.
+2. Copy this template into the directory containing its `.yyp` file.
+3. Complete `docs/00-project-readiness.md` and the planning files in order.
+4. Update relevant diagrams.
+5. Give Codex a focused task with acceptance criteria and manual tests.
+6. Test the result in GameMaker.
+7. Review the complete Git diff independently.
+8. Approve corrections or the commit.
+9. Authorize a push separately when desired.
+
+If there is no `.yyp` file, Codex must stop rather than fabricate a GameMaker project. If multiple `.yyp` files exist, the user must identify the target.
+
+## Template structure
+
+```text
+AGENTS.md                     Codex entry point and safety gates
+README.md                     Template overview and onboarding
+docs/                         Project-specific plans and milestones
+diagrams/                     Project and workflow diagrams
+standards/                    Authoritative reusable working standards
+patterns/                     Optional, problem-specific design guidance
+prompts/                      Reusable task and review prompts
+reviews/                      Durable milestone and feature reviews
+source-assets/                Editable source art and audio
+tools/                        Optional project utilities
+builds/                       Ignored local build output
+gamemaker-project-layout.md   Expected copied-project layout
+```
+
+GameMaker creates and manages the actual project and resource folders in the target project; they are not included in this template repository.
+
+## Documentation
+
+Complete these project-specific files in order:
 
 1. `docs/00-project-readiness.md`
 2. `docs/01-game-vision.md`
@@ -35,10 +67,12 @@ Complete these files in order:
 8. `docs/07-roadmap.md`
 9. `docs/08-testing.md`
 
-Update the matching diagrams under `diagrams/`.
+`docs/00-project-readiness.md` is the only authority for milestone implementation readiness.
 
-## Important
+## Standards, patterns, and reviews
 
-The repository documentation should guide implementation without replacing playtesting.
+- `standards/` defines the development lifecycle, GameMaker project safety, resource editing, GML style, validation, and independent review process.
+- `patterns/` provides optional guidance for common problems. Use only relevant patterns after inspecting the current project.
+- `reviews/` stores durable review decisions, findings, test results, follow-up tasks, and commit references.
 
-Do not attempt to design the entire game before creating the first playable milestone.
+The documentation guides implementation without replacing GameMaker compilation, runtime testing, visual inspection, or gameplay-feel evaluation. Build one playable milestone at a time.
