@@ -25,12 +25,13 @@ Build one playable milestone at a time.
 **Review status:**
 
 - [ ] Planned
-- [ ] Ready
 - [ ] Implemented by Codex
 - [ ] Tested in GameMaker
 - [ ] Reviewed
 - [ ] Fixes completed
 - [ ] Committed
+
+Readiness for Codex implementation is determined only by `docs/00-project-readiness.md`.
 
 ---
 

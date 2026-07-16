@@ -1,5 +1,7 @@
 # Project Readiness Gate
 
+This file is the single authoritative milestone readiness gate. Status shown elsewhere does not authorize implementation.
+
 Coding may begin only when the Foundation section and the current milestone section are complete.
 
 ## Foundation

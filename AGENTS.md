@@ -37,15 +37,17 @@ Never invent GameMaker functions, events, APIs, metadata fields, or engine behav
 Before implementing a feature, read:
 
 1. `AGENTS.md`
-2. `docs/01-game-vision.md`
-3. `docs/02-gameplay.md`
-4. `docs/03-architecture.md`
-5. `docs/04-object-plan.md`
-6. `docs/05-room-plan.md`
-7. `docs/06-asset-plan.md`
-8. `docs/07-roadmap.md`
-9. `docs/08-testing.md`
-10. Relevant files under `diagrams/`
+2. `docs/00-project-readiness.md`
+3. `docs/01-game-vision.md`
+4. `docs/02-gameplay.md`
+5. `docs/03-architecture.md`
+6. `docs/04-object-plan.md`
+7. `docs/05-room-plan.md`
+8. `docs/06-asset-plan.md`
+9. `docs/07-roadmap.md`
+10. `docs/08-testing.md`
+11. `docs/09-coding-standards.md`
+12. Relevant files under `diagrams/`
 
 Then inspect the current GameMaker project and existing code.
 
@@ -330,6 +332,8 @@ For each feature:
 8. Produce the required completion report.
 
 ## Project-specific values
+
+This section is a concise summary. Detailed values belong in the relevant project documents under `docs/`. If a summary value conflicts with a detailed project document, the detailed project document is authoritative.
 
 Complete these before implementation:
 

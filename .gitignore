@@ -1,5 +1,6 @@
 # Builds and packages
-builds/
+builds/*
+!builds/README.md
 *.zip
 *.exe
 *.apk

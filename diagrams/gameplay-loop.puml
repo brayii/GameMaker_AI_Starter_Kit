@@ -3,6 +3,7 @@ title Core Gameplay Loop
 
 start
 :Enter gameplay;
+repeat
 :Observe game state;
 :Choose action;
 :Perform action;
@@ -14,10 +15,19 @@ if (Goal reached?) then (yes)
   stop
 else (no)
   if (Failure state?) then (yes)
-    :Retry, reset, or exit;
+    if (Retry?) then (yes)
+      :Retry or reset;
+      :Return to gameplay;
+    else (no)
+      :Exit gameplay;
+      stop
+    endif
   else (no)
     :Continue playing;
   endif
 endif
+repeat while (Continue gameplay?) is (yes)
+:Exit gameplay;
+stop
 
 @enduml
