@@ -11,6 +11,8 @@ Copy this template into the root of a new blank GameMaker project or an existing
 - Codex is the implementation engineer. It inspects the repository, makes scoped changes, performs self-review, and prepares work for approval.
 - GameMaker builds, runs, and validates the game.
 
+The human owner does not need to write GML. Codex can implement the documented game after onboarding and planning are complete. The human still compiles, runs, and evaluates the game in GameMaker.
+
 ## Workflow
 
 ```text
@@ -24,15 +26,24 @@ Codex never commits without explicit approval and never pushes without separate 
 
 1. Create or open a GameMaker project and save it.
 2. Copy this template into the directory containing its `.yyp` file.
-3. Complete `docs/00-project-readiness.md` and the planning files in order.
-4. Update relevant diagrams.
-5. Give Codex a focused task with acceptance criteria and manual tests.
-6. Test the result in GameMaker.
-7. Review the complete Git diff independently.
-8. Approve corrections or the commit.
-9. Authorize a push separately when desired.
+3. Use `prompts/onboard-project.md` to inspect the project and populate `docs/00-project-inventory.md`.
+4. Complete `docs/00-project-readiness.md` and the planning files in order.
+5. Update relevant diagrams.
+6. Give Codex a focused task with acceptance criteria and manual tests.
+7. Test the result in GameMaker.
+8. Review the complete Git diff independently.
+9. Approve corrections or the commit.
+10. Authorize a push separately when desired.
 
 If there is no `.yyp` file, Codex must stop rather than fabricate a GameMaker project. If multiple `.yyp` files exist, the user must identify the target.
+
+### New-project onboarding
+
+Create and save a blank project in GameMaker first. Codex inspects that project's current format, records decided facts, marks unknowns, and establishes only what the first milestone requires.
+
+### Existing-project onboarding
+
+Codex inventories resources, architecture, ownership, rooms, persistence, data, conventions, protected systems, and technical debt before major implementation. Existing deliberate project choices take priority over template defaults.
 
 ## Template structure
 
@@ -57,22 +68,23 @@ GameMaker creates and manages the actual project and resource folders in the tar
 
 Complete these project-specific files in order:
 
-1. `docs/00-project-readiness.md`
-2. `docs/01-game-vision.md`
-3. `docs/02-gameplay.md`
-4. `docs/03-architecture.md`
-5. `docs/04-object-plan.md`
-6. `docs/05-room-plan.md`
-7. `docs/06-asset-plan.md`
-8. `docs/07-roadmap.md`
-9. `docs/08-testing.md`
+1. `docs/00-project-inventory.md`
+2. `docs/00-project-readiness.md`
+3. `docs/01-game-vision.md`
+4. `docs/02-gameplay.md`
+5. `docs/03-architecture.md`
+6. `docs/04-object-plan.md`
+7. `docs/05-room-plan.md`
+8. `docs/06-asset-plan.md`
+9. `docs/07-roadmap.md`
+10. `docs/08-testing.md`
 
 `docs/00-project-readiness.md` is the only authority for milestone implementation readiness.
 
 ## Standards, patterns, and reviews
 
-- `standards/` defines the development lifecycle, GameMaker project safety, resource editing, GML style, validation, and independent review process.
-- `patterns/` provides optional guidance for common problems. Use only relevant patterns after inspecting the current project.
+- `standards/` defines onboarding, the development lifecycle, GameMaker project and resource safety, GML style, input, UI, audio, data, lifecycle, debugging, validation, and independent review.
+- `patterns/` provides optional guidance for common systems such as input, HUDs, audio, pause, transitions, movement, cameras, saves, FSMs, and enemy AI. Use only relevant patterns after inspecting the current project.
 - `reviews/` stores durable review decisions, findings, test results, follow-up tasks, and commit references.
 
 The documentation guides implementation without replacing GameMaker compilation, runtime testing, visual inspection, or gameplay-feel evaluation. Build one playable milestone at a time.

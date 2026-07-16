@@ -10,6 +10,8 @@ Coding may begin only when the Foundation section and the current milestone sect
 - [ ] GameMaker project created
 - [ ] Git repository initialized
 - [ ] `AGENTS.md` reviewed and committed
+- [ ] New or existing project onboarding completed
+- [ ] `docs/00-project-inventory.md` completed to the level required for the first milestone
 - [ ] Game vision completed
 - [ ] Core gameplay loop documented
 - [ ] Initial architecture documented

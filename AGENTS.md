@@ -44,7 +44,13 @@ Always read:
 4. `docs/01-game-vision.md`
 5. `docs/07-roadmap.md`
 
-Then read the standards, project documents, diagrams, and patterns relevant to the task. Read `standards/gamemaker-projects.md` before GameMaker resource or gameplay implementation. Patterns are optional guidance, not mandatory architecture.
+Then read the standards, project documents, diagrams, and patterns relevant to the task.
+
+- Read `standards/gamemaker-projects.md` and `standards/project-onboarding.md` when onboarding a project or before initial major implementation.
+- Read `standards/resources-and-assets.md` for visual, audio, data, extension, and other asset resources.
+- Read `standards/input.md`, `standards/ui-and-gui.md`, `standards/audio.md`, `standards/data-and-included-files.md`, `standards/debugging.md`, and `standards/lifecycle-and-pause.md` when those systems are affected.
+- Read `docs/00-project-inventory.md` before major implementation in an existing project.
+- Read relevant files under `patterns/` only when the task matches them. Patterns are optional guidance, not mandatory architecture.
 
 Then inspect the current GameMaker project and existing code.
 
@@ -55,6 +61,7 @@ Follow `standards/development-workflow.md` for every task.
 Do not begin GameMaker resource or gameplay implementation until:
 
 - Exactly one target `.yyp` project has been identified according to `standards/gamemaker-projects.md`.
+- Project onboarding and `docs/00-project-inventory.md` are complete enough for the current work.
 - The current milestone is marked ready in `docs/00-project-readiness.md`.
 
 If no `.yyp` file exists, do not fabricate a GameMaker project. Tell the user to create and save a blank project in GameMaker first, then stop before GameMaker implementation. Documentation-only maintenance of this reusable template does not require a `.yyp` file. If multiple `.yyp` files exist, report them and ask which project is in scope.
